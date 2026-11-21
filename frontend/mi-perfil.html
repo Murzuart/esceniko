@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi perfil – Esceniko</title>
+<meta name="description" content="Esceniko conecta a artistas independientes con quienes buscan su talento.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="punto" aria-hidden="true"></span> Esceniko</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="sr-only">Menú</span>
+      <span class="menu-icono" aria-hidden="true"></span>
+    </button>
+
+    <div class="menu" id="menu-principal">
+      <nav class="nav-links" aria-label="Principal">
+        <a href="index.html#explorar">Explorar talento</a>
+        <a href="index.html#funciona">Cómo funciona</a>
+        <a href="index.html#creativos">Para creativos</a>
+        <a href="index.html#clientes">Para clientes</a>
+      </nav>
+      <div class="nav-cta">
+          <a class="btn-texto" href="mi-perfil.html">Mi perfil</a>
+          <span>Hola, Camila</span>
+          <a class="btn-primario" href="index.html">Salir</a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+<section class="auth" aria-labelledby="titulo-mi-perfil">
+  <div class="auth-tarjeta ancha">
+    <p class="eyebrow">Mi perfil de artista</p>
+    <h1 id="titulo-mi-perfil">Publicar mi perfil</h1>
+    <form class="auth-form" id="form-perfil" data-pendiente>
+      <label for="nombre_artistico">Nombre artístico</label>
+      <input type="text" id="nombre_artistico" name="nombre_artistico" maxlength="80" required>
+      <div class="auth-fila">
+        <div>
+          <label for="disciplina">Disciplina</label>
+          <select id="disciplina" name="disciplina" required>
+            <option value="">Elige una…</option>
+            <option value="cantantes-y-serenatas">Cantantes y serenatas</option>
+            <option value="bandas-y-trios">Bandas y tríos</option>
+            <option value="pintura-y-arte-digital">Pintura y arte digital</option>
+            <option value="fotografia">Fotografía</option>
+            <option value="modelado-3d">Modelado 3D</option>
+            <option value="edicion-de-video">Edición de video</option>
+            <option value="danza-y-teatro">Danza y teatro</option>
+          </select>
+        </div>
+        <div>
+          <label for="oferta">¿Qué ofreces?</label>
+          <select id="oferta" name="oferta" required>
+            <option value="">Elige una…</option>
+            <option value="obra">Obra para la venta</option>
+            <option value="servicio">Servicio por contratar</option>
+          </select>
+        </div>
+      </div>
+      <div class="auth-fila">
+        <div>
+          <label for="modalidad">Modalidad</label>
+          <select id="modalidad" name="modalidad" required>
+            <option value="">Elige una…</option>
+            <option value="presencial">Presencial</option>
+            <option value="virtual">Virtual</option>
+            <option value="ambas">Presencial y virtual</option>
+          </select>
+        </div>
+        <div>
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Ej: Bogotá" required>
+        </div>
+      </div>
+      <div class="auth-fila">
+        <div>
+          <label for="precio">Precio de referencia en COP (opcional)</label>
+          <input type="number" id="precio" name="precio" min="0" step="1000" placeholder="Ej: 150000">
+        </div>
+        <div>
+          <label for="whatsapp">WhatsApp (con indicativo)</label>
+          <input type="text" id="whatsapp" name="whatsapp" inputmode="numeric" pattern="[0-9]{10,15}" placeholder="Ej: 573001234567" aria-describedby="ayuda-whatsapp" required>
+        </div>
+      </div>
+      <p class="auth-ayuda" id="ayuda-whatsapp">El WhatsApp se muestra en tu perfil público para que los clientes te contacten.</p>
+      <label for="descripcion_corta">Descripción corta</label>
+      <p class="auth-ayuda" id="ayuda-corta">Máximo 160 caracteres. Es el texto que aparece en tu tarjeta.</p>
+      <input type="text" id="descripcion_corta" name="descripcion_corta" maxlength="160" aria-describedby="ayuda-corta" required>
+      <label for="descripcion">Sobre mí y mi trabajo</label>
+      <textarea id="descripcion" name="descripcion" rows="6"></textarea>
+      <label for="foto">Foto principal</label>
+      <p class="auth-ayuda" id="ayuda-foto">Formatos JPG, PNG o WEBP, de máximo 3 MB.</p>
+      <input type="file" id="foto" name="foto" accept="image/jpeg,image/png,image/webp" aria-describedby="ayuda-foto">
+      <button class="btn-primario" type="submit">Enviar mi perfil</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="punto" aria-hidden="true"></span> Esceniko</a>
+    <nav aria-label="Pie de página">
+      <ul class="pie-nav" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#explorar">Explorar talento</a></li>
+                  <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+              </ul>
+    </nav>
+    <p>© 2026 Esceniko — Plataforma Digital para el Gremio Creativo.</p>
+  </div>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/avisos.js"></script>
+</body>
+</html>

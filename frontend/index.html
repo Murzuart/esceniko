@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esceniko – Plataforma Digital para el Gremio Creativo</title>
+<meta name="description" content="Esceniko conecta a artistas independientes con quienes buscan su talento.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="punto" aria-hidden="true"></span> Esceniko</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="sr-only">Menú</span>
+      <span class="menu-icono" aria-hidden="true"></span>
+    </button>
+
+    <div class="menu" id="menu-principal">
+      <nav class="nav-links" aria-label="Principal">
+        <a href="index.html#explorar">Explorar talento</a>
+        <a href="index.html#funciona">Cómo funciona</a>
+        <a href="index.html#creativos">Para creativos</a>
+        <a href="index.html#clientes">Para clientes</a>
+      </nav>
+      <div class="nav-cta">
+                  <a class="btn-texto" href="login.html">Iniciar sesión</a>
+          <a class="btn-primario" href="registro.html">Publicar mi perfil</a>
+              </div>
+    </div>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+
+<section class="escenario" aria-labelledby="titulo-hero">
+  <div class="wrap">
+    <div class="contenido">
+      <p class="eyebrow">Vitrina para el gremio artístico independiente</p>
+      <h1 id="titulo-hero">Cada artista <em>merece su escenario</em></h1>
+      <p class="sub">
+        Esceniko conecta a cantantes, pintores, fotógrafos y artistas digitales
+        con quienes buscan su talento — compra obras originales o contrata un
+        servicio para tu evento, presencial en tu ciudad o de forma virtual,
+        sin intermediarios.
+      </p>
+
+      <form class="buscador" role="search" action="index.html" method="get">
+        <label class="sr-only" for="buscar">Buscar talento</label>
+        <input type="search" id="buscar" name="s" value="" placeholder="¿Qué buscas? Cantante, pintura, fotógrafo…">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <ul class="estelas" role="list" aria-label="Cifras de la plataforma">
+        <li class="estela"><strong>8</strong><span>talentos publicados</span></li>
+        <li class="estela"><strong>7</strong><span>disciplinas artísticas</span></li>
+        <li class="estela"><strong>8</strong><span>artistas registrados</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<nav class="wrap categorias" aria-label="Filtrar por disciplina">
+  <ul class="chip-fila" role="list">
+    <li><a aria-current="true" class="chip activo" href="index.html#explorar">Todos</a></li>
+          <li><a class="chip" href="index.html?disciplina=cantantes-y-serenatas#explorar">
+        Cantantes y serenatas      </a></li>
+          <li><a class="chip" href="index.html?disciplina=bandas-y-trios#explorar">
+        Bandas y tríos      </a></li>
+          <li><a class="chip" href="index.html?disciplina=pintura-y-arte-digital#explorar">
+        Pintura y arte digital      </a></li>
+          <li><a class="chip" href="index.html?disciplina=fotografia#explorar">
+        Fotografía      </a></li>
+          <li><a class="chip" href="index.html?disciplina=modelado-3d#explorar">
+        Modelado 3D      </a></li>
+          <li><a class="chip" href="index.html?disciplina=edicion-de-video#explorar">
+        Edición de video      </a></li>
+          <li><a class="chip" href="index.html?disciplina=danza-y-teatro#explorar">
+        Danza y teatro      </a></li>
+      </ul>
+</nav>
+
+<section class="bloque" id="explorar" aria-labelledby="titulo-talento">
+  <div class="wrap">
+    <div class="cabecera-seccion">
+      <div>
+        <p class="eyebrow">En cartelera esta semana</p>
+        <h2 id="titulo-talento">Talento destacado</h2>
+      </div>
+      <a class="ver-todo" href="index.html?catalogo=1#explorar">Ver catálogo completo <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="escenario-grid">
+              <article class="acto" data-id="1" data-disciplina="cantantes-y-serenatas">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 01</span>
+              <span class="portada-ejemplo" aria-hidden="true">🎤</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Cantantes y serenatas</span>
+              <h3><a href="artista.html?id=1">Camila Rojas</a></h3>
+                              <p class="meta-linea">Bogotá · Presencial y virtual</p>
+                            <div class="extracto"><p>Voz de música popular y baladas para serenatas, cumpleaños y celebraciones familiares.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="2" data-disciplina="pintura-y-arte-digital">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 02</span>
+              <span class="portada-ejemplo" aria-hidden="true">🎨</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Pintura y arte digital</span>
+              <h3><a href="artista.html?id=2">Mateo Vargas</a></h3>
+                              <p class="meta-linea">Medellín · Virtual</p>
+                            <div class="extracto"><p>Retratos y paisajes en óleo, además de ilustración digital por encargo.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="3" data-disciplina="fotografia">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 03</span>
+              <span class="portada-ejemplo" aria-hidden="true">📷</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Fotografía</span>
+              <h3><a href="artista.html?id=3">Lucía Fernández</a></h3>
+                              <p class="meta-linea">Cali · Presencial</p>
+                            <div class="extracto"><p>Fotografía de eventos y retrato, con entrega de galería digital.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="4" data-disciplina="modelado-3d">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 04</span>
+              <span class="portada-ejemplo" aria-hidden="true">🧊</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Modelado 3D</span>
+              <h3><a href="artista.html?id=4">Andrés Pineda</a></h3>
+                              <p class="meta-linea">Bogotá · Virtual</p>
+                            <div class="extracto"><p>Personajes y objetos 3D para videojuegos y publicidad.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="5" data-disciplina="edicion-de-video">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 05</span>
+              <span class="portada-ejemplo" aria-hidden="true">🎬</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Edición de video</span>
+              <h3><a href="artista.html?id=5">Valentina Cruz</a></h3>
+                              <p class="meta-linea">Barranquilla · Virtual</p>
+                            <div class="extracto"><p>Edición de reels, videoclips y piezas publicitarias.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="6" data-disciplina="bandas-y-trios">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 06</span>
+              <span class="portada-ejemplo" aria-hidden="true">🎶</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Bandas y tríos</span>
+              <h3><a href="artista.html?id=6">Trío Cuerdas del Sur</a></h3>
+                              <p class="meta-linea">Bucaramanga · Presencial</p>
+                            <div class="extracto"><p>Trío de cuerdas para bodas, aniversarios y eventos familiares.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="7" data-disciplina="danza-y-teatro">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 07</span>
+              <span class="portada-ejemplo" aria-hidden="true">💃</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Danza y teatro</span>
+              <h3><a href="artista.html?id=7">Colectivo Telón Abierto</a></h3>
+                              <p class="meta-linea">Pereira · Presencial y virtual</p>
+                            <div class="extracto"><p>Danza contemporánea y teatro corto para eventos y festivales.</p></div>
+            </div>
+        </article>
+              <article class="acto" data-id="8" data-disciplina="fotografia">
+            <div class="foco">
+              <span class="numero-acto" aria-hidden="true">ACTO 08</span>
+              <span class="portada-ejemplo" aria-hidden="true">📷</span>            </div>
+            <div class="info">
+              <span class="categoria-tag">Fotografía</span>
+              <h3><a href="artista.html?id=8">Nora Beltrán</a></h3>
+                              <p class="meta-linea">Cartagena · Presencial y virtual</p>
+                            <div class="extracto"><p>Fotografía de paisaje y de producto, con venta de impresiones.</p></div>
+            </div>
+        </article>
+          </div>
+  </div>
+</section>
+
+<section class="bloque como-funciona" id="funciona" aria-labelledby="titulo-funciona">
+  <div class="wrap">
+    <div class="cabecera-seccion amplia">
+      <div>
+        <p class="eyebrow">De la sala de ensayo al escenario</p>
+        <h2 id="titulo-funciona">Cómo funciona</h2>
+      </div>
+    </div>
+
+    <ol class="pasos" role="list">
+      <li class="paso">
+        <span class="num" aria-hidden="true">1</span>
+        <h3>El artista publica</h3>
+        <p>Sube su portafolio: obras para la venta (pintura, arte digital, fotografía, 3D) o servicios para contratar (canto, serenatas, edición de video).</p>
+      </li>
+      <li class="paso">
+        <span class="num" aria-hidden="true">2</span>
+        <h3>El cliente explora</h3>
+        <p>Filtra por disciplina, ciudad y modalidad: quiere comprar una obra o contratar un artista para un evento, presencial o virtual.</p>
+      </li>
+      <li class="paso">
+        <span class="num" aria-hidden="true">3</span>
+        <h3>Se cierra el trato</h3>
+        <p>Compra la obra directamente o coordina el servicio por contacto directo, sin intermediarios ni comisiones ocultas.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloque" aria-labelledby="titulo-roles">
+  <div class="wrap">
+    <div class="cabecera-seccion">
+      <div>
+        <p class="eyebrow">Un espacio, dos roles</p>
+        <h2 id="titulo-roles">Pensado para ambos lados del escenario</h2>
+      </div>
+    </div>
+
+    <div class="doble">
+      <article class="panel creativos" id="creativos">
+        <p class="eyebrow">Para artistas</p>
+        <h3>Vende tu obra o contrata tu talento</h3>
+        <ul>
+          <li><strong>Publica lo que haces</strong> — pinturas, fotografía, música, video, 3D, todo en un solo perfil.</li>
+          <li><strong>Vende directo</strong> — tus obras las compra quien las quiere, sin galerías de por medio.</li>
+          <li><strong>Recibe contrataciones</strong> — serenatas, eventos y encargos, presenciales o virtuales.</li>
+        </ul>
+      </article>
+
+      <article class="panel clientes" id="clientes">
+        <p class="eyebrow">Para clientes</p>
+        <h3>Encuentra justo lo que necesitas</h3>
+        <ul>
+          <li><strong>Compra obras originales</strong> — un regalo, una pieza para publicidad, una foto con licencia de uso.</li>
+          <li><strong>Contrata para tu evento</strong> — un cantante de música popular para un cumpleaños, una serenata sorpresa.</li>
+          <li><strong>Presencial o virtual</strong> — filtra por ciudad si necesitas al artista en persona.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" aria-labelledby="titulo-cta">
+  <div class="wrap">
+    <div class="contenido">
+      <h2 id="titulo-cta">Tu arte, listo para su escenario</h2>
+      <p>Únete a la primera vitrina digital para el talento artístico independiente de Latinoamérica.</p>
+      <div class="cta-botones">
+        <a class="btn-primario" href="registro.html">Publicar mi perfil artístico</a>
+        <a class="btn-outline" href="index.html#explorar">Quiero comprar o contratar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="punto" aria-hidden="true"></span> Esceniko</a>
+    <nav aria-label="Pie de página">
+      <ul class="pie-nav" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#explorar">Explorar talento</a></li>
+                  <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+              </ul>
+    </nav>
+    <p>© 2026 Esceniko — Plataforma Digital para el Gremio Creativo.</p>
+  </div>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/filtros.js"></script>
+
+
+</body></html>

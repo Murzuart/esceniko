@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear cuenta – Esceniko</title>
+<meta name="description" content="Esceniko conecta a artistas independientes con quienes buscan su talento.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="punto" aria-hidden="true"></span> Esceniko</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="sr-only">Menú</span>
+      <span class="menu-icono" aria-hidden="true"></span>
+    </button>
+
+    <div class="menu" id="menu-principal">
+      <nav class="nav-links" aria-label="Principal">
+        <a href="index.html#explorar">Explorar talento</a>
+        <a href="index.html#funciona">Cómo funciona</a>
+        <a href="index.html#creativos">Para creativos</a>
+        <a href="index.html#clientes">Para clientes</a>
+      </nav>
+      <div class="nav-cta">
+                  <a class="btn-texto" href="login.html">Iniciar sesión</a>
+          <a class="btn-primario" href="registro.html">Publicar mi perfil</a>
+              </div>
+    </div>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+<section class="auth" aria-labelledby="titulo-registro">
+  <div class="auth-tarjeta">
+    <p class="eyebrow">Únete a Esceniko</p>
+    <h1 id="titulo-registro">Crear cuenta</h1>
+    <div class="auth-error" id="registro-error" role="alert" hidden></div>
+    <form class="auth-form" id="form-registro" data-pendiente>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required>
+      <p class="auth-ayuda">Mínimo 8 caracteres.</p>
+      <fieldset>
+        <legend>¿Cómo vas a usar Esceniko?</legend>
+        <div class="auth-roles">
+          <label class="auth-rol"><input type="radio" name="rol" value="artista" checked><span><strong>Soy artista</strong>Quiero publicar mi perfil</span></label>
+          <label class="auth-rol"><input type="radio" name="rol" value="cliente"><span><strong>Soy cliente</strong>Busco talento</span></label>
+        </div>
+      </fieldset>
+      <button class="btn-primario" type="submit">Crear mi cuenta</button>
+    </form>
+    <p class="auth-pie">¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="punto" aria-hidden="true"></span> Esceniko</a>
+    <nav aria-label="Pie de página">
+      <ul class="pie-nav" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#explorar">Explorar talento</a></li>
+                  <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+              </ul>
+    </nav>
+    <p>© 2026 Esceniko — Plataforma Digital para el Gremio Creativo.</p>
+  </div>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/avisos.js"></script>
+</body>
+</html>
