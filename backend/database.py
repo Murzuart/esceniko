@@ -1,4 +1,5 @@
 """Base de datos SQLite de Esceniko: conexión, tablas y datos de ejemplo."""
+import hashlib
 import sqlite3
 from pathlib import Path
 
@@ -61,6 +62,10 @@ ARTISTAS_EJEMPLO = [
 ]
 
 
+def encriptar_password(password: str) -> str:
+    return hashlib.sha256(password.encode("utf-8")).hexdigest()
+
+
 def conectar():
     """Abre una conexión a la base de datos. Las filas se leen como diccionarios."""
     con = sqlite3.connect(RUTA_DB)
@@ -83,6 +88,11 @@ def crear_tablas(con):
         rol           TEXT NOT NULL CHECK (rol IN ('artista', 'cliente', 'admin')),
         creado_en     TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
+    CREATE TABLE IF NOT EXISTS sesiones (
+        token      TEXT PRIMARY KEY,
+        usuario_id INTEGER NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+        creado_en  TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
     CREATE TABLE IF NOT EXISTS artistas (
         id                INTEGER PRIMARY KEY AUTOINCREMENT,
         usuario_id        INTEGER REFERENCES usuarios(id) ON DELETE SET NULL,
@@ -104,8 +114,16 @@ def crear_tablas(con):
 
 
 def cargar_datos_de_ejemplo(con):
-    """Inserta disciplinas y artistas de ejemplo solo si las tablas están vacías."""
+    """Inserta disciplinas, usuario admin y artistas de ejemplo si las tablas están vacías."""
     con.executemany("INSERT OR IGNORE INTO disciplinas (slug, nombre) VALUES (?, ?)", DISCIPLINAS)
+
+    hay_usuarios = con.execute("SELECT COUNT(*) FROM usuarios").fetchone()[0]
+    if hay_usuarios == 0:
+        con.execute(
+            "INSERT INTO usuarios (nombre, email, password_hash, rol) VALUES (?, ?, ?, ?)",
+            ("Administrador Esceniko", "admin@esceniko.com", encriptar_password("admin123"), "admin"),
+        )
+
     hay = con.execute("SELECT COUNT(*) FROM artistas").fetchone()[0]
     if hay == 0:
         con.executemany(
